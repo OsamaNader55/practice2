@@ -1,0 +1,477 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="StoreModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="branche_stores">
+          <Key>
+            <PropertyRef Name="store_id" />
+          </Key>
+          <Property Name="store_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="store_name" Type="nvarchar" MaxLength="50" />
+          <Property Name="branch_id" Type="int" />
+        </EntityType>
+        <EntityType Name="branches">
+          <Key>
+            <PropertyRef Name="branch_id" />
+          </Key>
+          <Property Name="branch_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="branch_name" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="order_details">
+          <Key>
+            <PropertyRef Name="order_details_id" />
+          </Key>
+          <Property Name="order_details_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="order_id" Type="int" />
+          <Property Name="unit_id" Type="int" />
+          <Property Name="product_id" Type="int" />
+          <Property Name="price" Type="float" />
+          <Property Name="quantity" Type="float" />
+        </EntityType>
+        <EntityType Name="order_kind">
+          <Key>
+            <PropertyRef Name="order_kind_id" />
+          </Key>
+          <Property Name="order_kind_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="order_kind_name" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="order_master">
+          <Key>
+            <PropertyRef Name="order_id" />
+          </Key>
+          <Property Name="store_id" Type="int" />
+          <Property Name="user_id" Type="int" />
+          <Property Name="emp_id" Type="int" />
+          <Property Name="order_kind_id" Type="int" />
+          <Property Name="order_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="order_code" Type="nvarchar" MaxLength="50" />
+          <Property Name="order_date" Type="datetime" />
+          <Property Name="order_discount" Type="float" />
+          <Property Name="order_tax" Type="float" />
+        </EntityType>
+        <EntityType Name="permissions_groups">
+          <Key>
+            <PropertyRef Name="group_id" />
+          </Key>
+          <Property Name="group_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="group_name" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="permissions_screens">
+          <Key>
+            <PropertyRef Name="screen_id" />
+          </Key>
+          <Property Name="screen_name" Type="nvarchar" MaxLength="100" />
+          <Property Name="group_id" Type="int" />
+          <Property Name="screen_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <EntityType Name="products">
+          <Key>
+            <PropertyRef Name="product_id" />
+          </Key>
+          <Property Name="product_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="product_name" Type="nvarchar" MaxLength="50" />
+          <Property Name="product_code" Type="nvarchar" MaxLength="50" />
+          <Property Name="product_image" Type="nvarchar" MaxLength="50" />
+          <Property Name="product_date" Type="datetime" />
+          <Property Name="product_quantity" Type="int" />
+          <Property Name="product_quantity_alert" Type="int" />
+          <Property Name="product_price" Type="float" />
+          <Property Name="cate_id" Type="int" />
+          <Property Name="store_id" Type="int" />
+          <Property Name="unit_id" Type="int" />
+        </EntityType>
+        <EntityType Name="products_category">
+          <Key>
+            <PropertyRef Name="cate_id" />
+          </Key>
+          <Property Name="cate_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="cate_name" Type="nvarchar" MaxLength="50" />
+          <Property Name="cate_image" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'Store.dbo.Settings' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Settings">
+          <Key>
+            <PropertyRef Name="setting_id" />
+          </Key>
+          <Property Name="setting_id" Type="int" Nullable="false" />
+          <Property Name="setting_name" Type="nvarchar" MaxLength="50" />
+          <Property Name="setting_phone" Type="nvarchar" MaxLength="50" />
+          <Property Name="setting_logo" Type="nvarchar" MaxLength="50" />
+          <Property Name="setting_address" Type="nvarchar(max)" />
+          <Property Name="setting_email" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="units">
+          <Key>
+            <PropertyRef Name="unit_id" />
+          </Key>
+          <Property Name="unit_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="unit_name" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="user_id" />
+          </Key>
+          <Property Name="user_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="user_code" Type="nvarchar" MaxLength="50" />
+          <Property Name="user_fullname" Type="nvarchar" MaxLength="50" />
+          <Property Name="user_address" Type="nvarchar" MaxLength="50" />
+          <Property Name="user_phone" Type="nvarchar" MaxLength="50" />
+          <Property Name="user_name" Type="nvarchar" MaxLength="50" />
+          <Property Name="user_password" Type="nvarchar" MaxLength="50" />
+          <Property Name="user_date" Type="datetime" />
+          <Property Name="user_kind_id" Type="int" />
+          <Property Name="group_id" Type="int" />
+          <Property Name="branch_id" Type="int" />
+        </EntityType>
+        <EntityType Name="users_kind">
+          <Key>
+            <PropertyRef Name="user_kind_id" />
+          </Key>
+          <Property Name="user_kind_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="user_kind" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityContainer Name="StoreModelStoreContainer">
+          <EntitySet Name="branche_stores" EntityType="Self.branche_stores" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="branches" EntityType="Self.branches" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="order_details" EntityType="Self.order_details" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="order_kind" EntityType="Self.order_kind" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="order_master" EntityType="Self.order_master" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="permissions_groups" EntityType="Self.permissions_groups" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="permissions_screens" EntityType="Self.permissions_screens" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="products" EntityType="Self.products" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="products_category" EntityType="Self.products_category" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="units" EntityType="Self.units" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="users_kind" EntityType="Self.users_kind" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Settings" EntityType="Self.Settings" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Settings].[setting_id] AS [setting_id], 
+    [Settings].[setting_name] AS [setting_name], 
+    [Settings].[setting_phone] AS [setting_phone], 
+    [Settings].[setting_logo] AS [setting_logo], 
+    [Settings].[setting_address] AS [setting_address], 
+    [Settings].[setting_email] AS [setting_email]
+    FROM [dbo].[Settings] AS [Settings]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="StoreModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="branche_stores">
+          <Key>
+            <PropertyRef Name="store_id" />
+          </Key>
+          <Property Name="store_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="store_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="branch_id" Type="Int32" />
+        </EntityType>
+        <EntityType Name="branch">
+          <Key>
+            <PropertyRef Name="branch_id" />
+          </Key>
+          <Property Name="branch_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="branch_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="order_details">
+          <Key>
+            <PropertyRef Name="order_details_id" />
+          </Key>
+          <Property Name="order_details_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="order_id" Type="Int32" />
+          <Property Name="unit_id" Type="Int32" />
+          <Property Name="product_id" Type="Int32" />
+          <Property Name="price" Type="Double" />
+          <Property Name="quantity" Type="Double" />
+        </EntityType>
+        <EntityType Name="order_kind">
+          <Key>
+            <PropertyRef Name="order_kind_id" />
+          </Key>
+          <Property Name="order_kind_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="order_kind_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="order_master">
+          <Key>
+            <PropertyRef Name="order_id" />
+          </Key>
+          <Property Name="store_id" Type="Int32" />
+          <Property Name="user_id" Type="Int32" />
+          <Property Name="emp_id" Type="Int32" />
+          <Property Name="order_kind_id" Type="Int32" />
+          <Property Name="order_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="order_code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="order_date" Type="DateTime" Precision="3" />
+          <Property Name="order_discount" Type="Double" />
+          <Property Name="order_tax" Type="Double" />
+        </EntityType>
+        <EntityType Name="permissions_groups">
+          <Key>
+            <PropertyRef Name="group_id" />
+          </Key>
+          <Property Name="group_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="group_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="permissions_screens">
+          <Key>
+            <PropertyRef Name="screen_id" />
+          </Key>
+          <Property Name="screen_name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="group_id" Type="Int32" />
+          <Property Name="screen_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="product">
+          <Key>
+            <PropertyRef Name="product_id" />
+          </Key>
+          <Property Name="product_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="product_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="product_code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="product_image" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="product_date" Type="DateTime" Precision="3" />
+          <Property Name="product_quantity" Type="Int32" />
+          <Property Name="product_quantity_alert" Type="Int32" />
+          <Property Name="product_price" Type="Double" />
+          <Property Name="cate_id" Type="Int32" />
+          <Property Name="store_id" Type="Int32" />
+          <Property Name="unit_id" Type="Int32" />
+        </EntityType>
+        <EntityType Name="products_category">
+          <Key>
+            <PropertyRef Name="cate_id" />
+          </Key>
+          <Property Name="cate_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="cate_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="cate_image" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="unit">
+          <Key>
+            <PropertyRef Name="unit_id" />
+          </Key>
+          <Property Name="unit_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="unit_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="user_id" />
+          </Key>
+          <Property Name="user_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="user_code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="user_fullname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="user_address" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="user_phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="user_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="user_password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="user_date" Type="DateTime" Precision="3" />
+          <Property Name="user_kind_id" Type="Int32" />
+          <Property Name="group_id" Type="Int32" />
+          <Property Name="branch_id" Type="Int32" />
+        </EntityType>
+        <EntityType Name="users_kind">
+          <Key>
+            <PropertyRef Name="user_kind_id" />
+          </Key>
+          <Property Name="user_kind_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="user_kind" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Setting">
+          <Key>
+            <PropertyRef Name="setting_id" />
+          </Key>
+          <Property Name="setting_id" Type="Int32" Nullable="false" />
+          <Property Name="setting_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="setting_phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="setting_logo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="setting_address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="setting_email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="StoreEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="branche_stores" EntityType="Self.branche_stores" />
+          <EntitySet Name="branches" EntityType="Self.branch" />
+          <EntitySet Name="order_details" EntityType="Self.order_details" />
+          <EntitySet Name="order_kind" EntityType="Self.order_kind" />
+          <EntitySet Name="order_master" EntityType="Self.order_master" />
+          <EntitySet Name="permissions_groups" EntityType="Self.permissions_groups" />
+          <EntitySet Name="permissions_screens" EntityType="Self.permissions_screens" />
+          <EntitySet Name="products" EntityType="Self.product" />
+          <EntitySet Name="products_category" EntityType="Self.products_category" />
+          <EntitySet Name="units" EntityType="Self.unit" />
+          <EntitySet Name="Users" EntityType="Self.User" />
+          <EntitySet Name="users_kind" EntityType="Self.users_kind" />
+          <EntitySet Name="Settings" EntityType="Self.Setting" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="StoreModelStoreContainer" CdmEntityContainer="StoreEntities">
+          <EntitySetMapping Name="branche_stores">
+            <EntityTypeMapping TypeName="StoreModel.branche_stores">
+              <MappingFragment StoreEntitySet="branche_stores">
+                <ScalarProperty Name="store_id" ColumnName="store_id" />
+                <ScalarProperty Name="store_name" ColumnName="store_name" />
+                <ScalarProperty Name="branch_id" ColumnName="branch_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="branches">
+            <EntityTypeMapping TypeName="StoreModel.branch">
+              <MappingFragment StoreEntitySet="branches">
+                <ScalarProperty Name="branch_id" ColumnName="branch_id" />
+                <ScalarProperty Name="branch_name" ColumnName="branch_name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="order_details">
+            <EntityTypeMapping TypeName="StoreModel.order_details">
+              <MappingFragment StoreEntitySet="order_details">
+                <ScalarProperty Name="order_details_id" ColumnName="order_details_id" />
+                <ScalarProperty Name="order_id" ColumnName="order_id" />
+                <ScalarProperty Name="unit_id" ColumnName="unit_id" />
+                <ScalarProperty Name="product_id" ColumnName="product_id" />
+                <ScalarProperty Name="price" ColumnName="price" />
+                <ScalarProperty Name="quantity" ColumnName="quantity" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="order_kind">
+            <EntityTypeMapping TypeName="StoreModel.order_kind">
+              <MappingFragment StoreEntitySet="order_kind">
+                <ScalarProperty Name="order_kind_id" ColumnName="order_kind_id" />
+                <ScalarProperty Name="order_kind_name" ColumnName="order_kind_name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="order_master">
+            <EntityTypeMapping TypeName="StoreModel.order_master">
+              <MappingFragment StoreEntitySet="order_master">
+                <ScalarProperty Name="store_id" ColumnName="store_id" />
+                <ScalarProperty Name="user_id" ColumnName="user_id" />
+                <ScalarProperty Name="emp_id" ColumnName="emp_id" />
+                <ScalarProperty Name="order_kind_id" ColumnName="order_kind_id" />
+                <ScalarProperty Name="order_id" ColumnName="order_id" />
+                <ScalarProperty Name="order_code" ColumnName="order_code" />
+                <ScalarProperty Name="order_date" ColumnName="order_date" />
+                <ScalarProperty Name="order_discount" ColumnName="order_discount" />
+                <ScalarProperty Name="order_tax" ColumnName="order_tax" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="permissions_groups">
+            <EntityTypeMapping TypeName="StoreModel.permissions_groups">
+              <MappingFragment StoreEntitySet="permissions_groups">
+                <ScalarProperty Name="group_id" ColumnName="group_id" />
+                <ScalarProperty Name="group_name" ColumnName="group_name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="permissions_screens">
+            <EntityTypeMapping TypeName="StoreModel.permissions_screens">
+              <MappingFragment StoreEntitySet="permissions_screens">
+                <ScalarProperty Name="screen_name" ColumnName="screen_name" />
+                <ScalarProperty Name="group_id" ColumnName="group_id" />
+                <ScalarProperty Name="screen_id" ColumnName="screen_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="products">
+            <EntityTypeMapping TypeName="StoreModel.product">
+              <MappingFragment StoreEntitySet="products">
+                <ScalarProperty Name="product_id" ColumnName="product_id" />
+                <ScalarProperty Name="product_name" ColumnName="product_name" />
+                <ScalarProperty Name="product_code" ColumnName="product_code" />
+                <ScalarProperty Name="product_image" ColumnName="product_image" />
+                <ScalarProperty Name="product_date" ColumnName="product_date" />
+                <ScalarProperty Name="product_quantity" ColumnName="product_quantity" />
+                <ScalarProperty Name="product_quantity_alert" ColumnName="product_quantity_alert" />
+                <ScalarProperty Name="product_price" ColumnName="product_price" />
+                <ScalarProperty Name="cate_id" ColumnName="cate_id" />
+                <ScalarProperty Name="store_id" ColumnName="store_id" />
+                <ScalarProperty Name="unit_id" ColumnName="unit_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="products_category">
+            <EntityTypeMapping TypeName="StoreModel.products_category">
+              <MappingFragment StoreEntitySet="products_category">
+                <ScalarProperty Name="cate_id" ColumnName="cate_id" />
+                <ScalarProperty Name="cate_name" ColumnName="cate_name" />
+                <ScalarProperty Name="cate_image" ColumnName="cate_image" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="units">
+            <EntityTypeMapping TypeName="StoreModel.unit">
+              <MappingFragment StoreEntitySet="units">
+                <ScalarProperty Name="unit_id" ColumnName="unit_id" />
+                <ScalarProperty Name="unit_name" ColumnName="unit_name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="StoreModel.User">
+              <MappingFragment StoreEntitySet="Users">
+                <ScalarProperty Name="user_id" ColumnName="user_id" />
+                <ScalarProperty Name="user_code" ColumnName="user_code" />
+                <ScalarProperty Name="user_fullname" ColumnName="user_fullname" />
+                <ScalarProperty Name="user_address" ColumnName="user_address" />
+                <ScalarProperty Name="user_phone" ColumnName="user_phone" />
+                <ScalarProperty Name="user_name" ColumnName="user_name" />
+                <ScalarProperty Name="user_password" ColumnName="user_password" />
+                <ScalarProperty Name="user_date" ColumnName="user_date" />
+                <ScalarProperty Name="user_kind_id" ColumnName="user_kind_id" />
+                <ScalarProperty Name="group_id" ColumnName="group_id" />
+                <ScalarProperty Name="branch_id" ColumnName="branch_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="users_kind">
+            <EntityTypeMapping TypeName="StoreModel.users_kind">
+              <MappingFragment StoreEntitySet="users_kind">
+                <ScalarProperty Name="user_kind_id" ColumnName="user_kind_id" />
+                <ScalarProperty Name="user_kind" ColumnName="user_kind" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Settings">
+            <EntityTypeMapping TypeName="StoreModel.Setting">
+              <MappingFragment StoreEntitySet="Settings">
+                <ScalarProperty Name="setting_id" ColumnName="setting_id" />
+                <ScalarProperty Name="setting_name" ColumnName="setting_name" />
+                <ScalarProperty Name="setting_phone" ColumnName="setting_phone" />
+                <ScalarProperty Name="setting_logo" ColumnName="setting_logo" />
+                <ScalarProperty Name="setting_address" ColumnName="setting_address" />
+                <ScalarProperty Name="setting_email" ColumnName="setting_email" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
