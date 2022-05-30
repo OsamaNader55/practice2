@@ -8,12 +8,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
-
+using Sales;
 namespace practice2._1
 {
     public partial class frmBackUp : frmMaster
     {
-        SqlConnection conn=new SqlConnection(Properties.Settings.Default.UserConnectionString);
+        SqlConnection conn=new SqlConnection(Sales. Properties.Settings.Default.UserConnectionString);
         public frmBackUp()
         {
             InitializeComponent();

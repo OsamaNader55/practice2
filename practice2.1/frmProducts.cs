@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using DevExpress.XtraEditors.Repository;
-
+using Sales;
 namespace practice2._1
 {
     public partial class frmProducts : frmMaster

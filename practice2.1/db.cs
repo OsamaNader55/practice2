@@ -8,8 +8,9 @@ using System.Linq.Expressions;
 using System.ComponentModel;
 using System;
 
-namespace practice2._1
+namespace Sales
 {
+
     partial class dbDataContext
     {
 

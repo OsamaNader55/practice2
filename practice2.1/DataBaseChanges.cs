@@ -7,6 +7,7 @@ using System.Windows.Forms;
 using TableDependency.SqlClient;
 using TableDependency.SqlClient.Base.Enums;
 using TableDependency.SqlClient.Base.EventArgs;
+using Sales;
 namespace practice2._1
 {
     public static class DataBaseChanges

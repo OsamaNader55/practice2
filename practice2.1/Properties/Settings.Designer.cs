@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace practice2._1.Properties {
+namespace Sales.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
@@ -82,7 +82,7 @@ namespace practice2._1.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-6GA3J6A;Initial Catalog=Store2;Integrated Security=True")]
         public string UserConnectionString {
             get {
                 return ((string)(this["UserConnectionString"]));

@@ -8,13 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
-
+using Sales;
 namespace practice2._1
 {
     
     public partial class frmRestore : frmMaster
     {
-        SqlConnection conn = new SqlConnection(Properties.Settings.Default.UserConnectionString);
+        SqlConnection conn = new SqlConnection(Sales.Properties.Settings.Default.UserConnectionString);
         public frmRestore()
         {
             InitializeComponent();
@@ -33,7 +33,7 @@ namespace practice2._1
             {
                 if (db.DatabaseExists() == false)
                 {
-                    string x = Properties.Settings.Default.UserConnectionString;
+                    string x = Sales.Properties.Settings.Default.UserConnectionString;
                     x = x.Replace("Store2","master");
                     conn.ConnectionString = x;
                      query = "Restore Database Store2 From Disk='" + txtPath.Text + "' WITH REPLACE;alter database Store2 SET ENABLE_BROKER WITH ROLLBACK IMMEDIATE;";

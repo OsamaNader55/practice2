@@ -1,5 +1,5 @@
 ﻿<?xml version='1.0' encoding='utf-8'?>
-<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="practice2._1.Properties" GeneratedClassName="Settings">
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Sales.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
     <Setting Name="Store2ConnectionString" GenerateDefaultValueInCode="false" Type="(Connection string)" Scope="Application">
@@ -23,7 +23,7 @@
       <Value Profile="(Default)">False</Value>
     </Setting>
     <Setting Name="UserConnectionString" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
+      <Value Profile="(Default)">Data Source=DESKTOP-6GA3J6A;Initial Catalog=Store2;Integrated Security=True</Value>
     </Setting>
   </Settings>
 </SettingsFile>

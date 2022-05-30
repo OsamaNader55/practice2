@@ -56,7 +56,7 @@
             // btnNew
             // 
             this.btnNew.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnNew.Image = global::practice2._1.Properties.Resources._1486485588_add_create_new_math_sign_cross_plus_81186__1_;
+            this.btnNew.Image = global::Sales.Properties.Resources._1486485588_add_create_new_math_sign_cross_plus_81186__1_;
             this.btnNew.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnNew.Location = new System.Drawing.Point(706, 0);
             this.btnNew.Name = "btnNew";

@@ -8,9 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Reflection;
-using practice2._1.Properties;
-using DevExpress.LookAndFeel;
 
+using DevExpress.LookAndFeel;
+using Sales;
 namespace practice2._1
 {
     public partial class frmMain : frmMaster
@@ -26,7 +26,7 @@ namespace practice2._1
         public frmMain()
         {
             InitializeComponent();
-            UserLookAndFeel.Default.SkinName = Settings.Default["ApplicationSkinName"].ToString();
+            UserLookAndFeel.Default.SkinName =Sales.Properties. Settings.Default["ApplicationSkinName"].ToString();
         }
         public static void OpenForm(string name)
         {
@@ -248,8 +248,8 @@ namespace practice2._1
 
         private void frmMain_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Settings.Default["ApplicationSkinName"] = UserLookAndFeel.Default.SkinName;
-            Settings.Default.Save();
+          Sales.Properties.  Settings.Default["ApplicationSkinName"] = UserLookAndFeel.Default.SkinName;
+         Sales.Properties.  Settings.Default.Save();
             Application.Exit();
             
         }

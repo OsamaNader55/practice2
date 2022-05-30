@@ -19,6 +19,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraLayout;
+using Sales;
 
 namespace practice2._1
 {
@@ -608,7 +609,7 @@ namespace practice2._1
                 {
                     if (row.StoreID == Convert.ToInt32(e.OldValue))
                     {
-                        row.StoreID= Convert.ToInt32(e.NewValue);   
+                        row.StoreID= Convert.ToInt32(e.NewValue); 
                     }
                 }
             }

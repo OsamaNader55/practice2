@@ -104,7 +104,7 @@
             this.btnLog.Appearance.Options.UseFont = true;
             this.btnLog.Appearance.Options.UseForeColor = true;
             this.btnLog.Appearance.Options.UseTextOptions = true;
-            this.btnLog.ImageOptions.Image = global::practice2._1.Properties.Resources.apply_32x32;
+            this.btnLog.ImageOptions.Image = global::Sales.Properties.Resources.apply_32x32;
             this.btnLog.Location = new System.Drawing.Point(212, 259);
             this.btnLog.Name = "btnLog";
             this.btnLog.Size = new System.Drawing.Size(83, 40);
@@ -122,7 +122,7 @@
             this.btnCancel.Appearance.Options.UseForeColor = true;
             this.btnCancel.Appearance.Options.UseTextOptions = true;
             this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCancel.ImageOptions.Image = global::practice2._1.Properties.Resources.cancel_32x32;
+            this.btnCancel.ImageOptions.Image = global::Sales.Properties.Resources.cancel_32x32;
             this.btnCancel.Location = new System.Drawing.Point(106, 259);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(77, 40);

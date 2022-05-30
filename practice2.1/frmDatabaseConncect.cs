@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using Sales;
 
 namespace practice2._1
 {
@@ -24,8 +24,8 @@ namespace practice2._1
         {
            simpleButton1.PerformClick();
             if (error == 1) return;
-            Properties.Settings.Default.UserConnectionString = txtConnectionString.Text;
-            Properties.Settings.Default.Save();
+           Sales. Properties.Settings.Default.UserConnectionString = txtConnectionString.Text;
+            Sales. Properties.Settings.Default.Save();
             MessageBox.Show("تم ضبط الاتصال ");
             
         }

@@ -105,7 +105,7 @@
             // 
             this.barButtonItem1.Caption = "جديد";
             this.barButtonItem1.Id = 0;
-            this.barButtonItem1.ImageOptions.Image = global::practice2._1.Properties.Resources._1486485588_add_create_new_math_sign_cross_plus_81186__1_;
+            this.barButtonItem1.ImageOptions.Image = global::Sales.Properties.Resources._1486485588_add_create_new_math_sign_cross_plus_81186__1_;
             this.barButtonItem1.ImageToTextAlignment = DevExpress.XtraBars.BarItemImageToTextAlignment.AfterText;
             this.barButtonItem1.Name = "barButtonItem1";
             this.barButtonItem1.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem1_ItemClick);
@@ -114,7 +114,7 @@
             // 
             this.barButtonItem2.Caption = "طباعه";
             this.barButtonItem2.Id = 1;
-            this.barButtonItem2.ImageOptions.Image = global::practice2._1.Properties.Resources.actions_document_print_15785;
+            this.barButtonItem2.ImageOptions.Image = global::Sales.Properties.Resources.actions_document_print_15785;
             this.barButtonItem2.ImageToTextAlignment = DevExpress.XtraBars.BarItemImageToTextAlignment.AfterText;
             this.barButtonItem2.Name = "barButtonItem2";
             this.barButtonItem2.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem2_ItemClick);
@@ -123,7 +123,7 @@
             // 
             this.btnRefresh.Caption = "تحديث";
             this.btnRefresh.Id = 2;
-            this.btnRefresh.ImageOptions.Image = global::practice2._1.Properties.Resources.gui_refresh_icon_1570472;
+            this.btnRefresh.ImageOptions.Image = global::Sales.Properties.Resources.gui_refresh_icon_1570472;
             this.btnRefresh.ImageToTextAlignment = DevExpress.XtraBars.BarItemImageToTextAlignment.AfterText;
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnRefresh_ItemClick);
@@ -364,7 +364,7 @@
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
             this.IconOptions.Image = ((System.Drawing.Image)(resources.GetObject("frmInvoiceList.IconOptions.Image")));
-            this.IconOptions.LargeImage = global::practice2._1.Properties.Resources.printer_32x32;
+            this.IconOptions.LargeImage = global::Sales.Properties.Resources.printer_32x32;
             this.Name = "frmInvoiceList";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.RightToLeftLayout = true;

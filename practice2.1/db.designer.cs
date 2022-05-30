@@ -9,7 +9,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace practice2._1
+namespace Sales
 {
 	using System.Data.Linq;
 	using System.Data.Linq.Mapping;
@@ -102,7 +102,7 @@ namespace practice2._1
     #endregion
 		
 		public dbDataContext() : 
-				base(global::practice2._1.Properties.Settings.Default.Store2ConnectionString, mappingSource)
+				base(global::Sales.Properties.Settings.Default.Store2ConnectionString, mappingSource)
 		{
 			OnCreated();
 		}

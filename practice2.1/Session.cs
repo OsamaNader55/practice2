@@ -5,6 +5,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TableDependency.SqlClient.Base.Abstracts;
+using Sales;
+
 
 namespace practice2._1
 {
@@ -40,7 +42,7 @@ namespace practice2._1
                         _products = new BindingList<Product>(db.Products.ToList());
                     }
                     //Set the DataBase service broker using "ALTER DATABASE DatabasName SET ENABLE_BROKER WITH ROLLBACK IMMEDIATE; "
-                    DataBaseChanges.Products = new TableDependency.SqlClient.SqlTableDependency<Product>(Properties.Settings.Default.UserConnectionString);
+                    DataBaseChanges.Products = new TableDependency.SqlClient.SqlTableDependency<Product>( Sales.Properties.Settings.Default.UserConnectionString);
                     DataBaseChanges.Products.OnChanged += DataBaseChanges.Products_Changed;
                     DataBaseChanges.Products.Start();
                 }
@@ -181,7 +183,7 @@ namespace practice2._1
                     {
                         _vendor = new BindingList<CustomersAndVendor>(db.CustomersAndVendors.Where(x => x.IsCustomer == false).ToList());
                     }
-                    DataBaseChanges.Vendors = new TableDependency.SqlClient.SqlTableDependency<DataBaseChanges.CustomersAndVendors>(Properties.Settings.Default.UserConnectionString, filter: new VendorsOnly());
+                    DataBaseChanges.Vendors = new TableDependency.SqlClient.SqlTableDependency<DataBaseChanges.CustomersAndVendors>(Sales.Properties.Settings.Default.UserConnectionString, filter: new VendorsOnly());
                     DataBaseChanges.Vendors.OnChanged += DataBaseChanges.Vendors_Changed;
                     DataBaseChanges.Vendors.Start();
                 }
@@ -200,7 +202,7 @@ namespace practice2._1
                     {
                         _account = new BindingList<Account>(db.Accounts.ToList());
                     }
-                    DataBaseChanges.Account = new TableDependency.SqlClient.SqlTableDependency<DataBaseChanges.Accounts>(Properties.Settings.Default.UserConnectionString);
+                    DataBaseChanges.Account = new TableDependency.SqlClient.SqlTableDependency<DataBaseChanges.Accounts>(Sales.Properties.Settings.Default.UserConnectionString);
                     DataBaseChanges.Account.OnChanged += DataBaseChanges.Accounts_Changed;
                     DataBaseChanges.Account.Start();
                 }
@@ -227,7 +229,7 @@ namespace practice2._1
                     {
                         _customer = new BindingList<CustomersAndVendor>(db.CustomersAndVendors.Where(x => x.IsCustomer == true).ToList());
                     }
-                    DataBaseChanges.Customers = new TableDependency.SqlClient.SqlTableDependency<DataBaseChanges.CustomersAndVendors>(Properties.Settings.Default.UserConnectionString, filter: new CustomersOnly());
+                    DataBaseChanges.Customers = new TableDependency.SqlClient.SqlTableDependency<DataBaseChanges.CustomersAndVendors>(Sales.Properties.Settings.Default.UserConnectionString, filter: new CustomersOnly());
                     DataBaseChanges.Customers.OnChanged += DataBaseChanges.Customers_Changed;
                     DataBaseChanges.Customers.Start();
                 }
@@ -283,7 +285,7 @@ namespace practice2._1
                     {
                         _store = new BindingList<Store>(db.Stores.ToList());
                     }
-                    DataBaseChanges._Stores = new TableDependency.SqlClient.SqlTableDependency<Store>(Properties.Settings.Default.UserConnectionString);
+                    DataBaseChanges._Stores = new TableDependency.SqlClient.SqlTableDependency<Store>(Sales.Properties.Settings.Default.UserConnectionString);
                     DataBaseChanges._Stores.OnChanged += DataBaseChanges._Store_Changed;
                     DataBaseChanges._Stores.Start();
                 }

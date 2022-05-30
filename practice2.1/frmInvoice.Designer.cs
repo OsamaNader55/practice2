@@ -285,7 +285,7 @@
             // 
             this.btnSave.Caption = "حفظ";
             this.btnSave.Id = 0;
-            this.btnSave.ImageOptions.Image = global::practice2._1.Properties.Resources.saveas_1173;
+            this.btnSave.ImageOptions.Image = global::Sales.Properties.Resources.saveas_1173;
             this.btnSave.ImageToTextAlignment = DevExpress.XtraBars.BarItemImageToTextAlignment.AfterText;
             this.btnSave.Name = "btnSave";
             this.btnSave.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnSave_ItemClick);
@@ -294,7 +294,7 @@
             // 
             this.btnNew.Caption = "جديد";
             this.btnNew.Id = 1;
-            this.btnNew.ImageOptions.Image = global::practice2._1.Properties.Resources._1486485588_add_create_new_math_sign_cross_plus_81186__1_;
+            this.btnNew.ImageOptions.Image = global::Sales.Properties.Resources._1486485588_add_create_new_math_sign_cross_plus_81186__1_;
             this.btnNew.ImageToTextAlignment = DevExpress.XtraBars.BarItemImageToTextAlignment.AfterText;
             this.btnNew.Name = "btnNew";
             this.btnNew.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnNew_ItemClick);
@@ -303,7 +303,7 @@
             // 
             this.btnPrint.Caption = "طباعه";
             this.btnPrint.Id = 2;
-            this.btnPrint.ImageOptions.Image = global::practice2._1.Properties.Resources.actions_document_print_15785;
+            this.btnPrint.ImageOptions.Image = global::Sales.Properties.Resources.actions_document_print_15785;
             this.btnPrint.ImageToTextAlignment = DevExpress.XtraBars.BarItemImageToTextAlignment.AfterText;
             this.btnPrint.Name = "btnPrint";
             this.btnPrint.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnPrint_ItemClick);
@@ -312,7 +312,7 @@
             // 
             this.btnDelete.Caption = "حذف";
             this.btnDelete.Id = 3;
-            this.btnDelete.ImageOptions.Image = global::practice2._1.Properties.Resources._32officeicons_3_89720;
+            this.btnDelete.ImageOptions.Image = global::Sales.Properties.Resources._32officeicons_3_89720;
             this.btnDelete.ImageToTextAlignment = DevExpress.XtraBars.BarItemImageToTextAlignment.AfterText;
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnDelete_ItemClick);
@@ -321,7 +321,7 @@
             // 
             this.btnCustomization.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right;
             this.btnCustomization.Id = 4;
-            this.btnCustomization.ImageOptions.SvgImage = global::practice2._1.Properties.Resources.initialstate;
+            this.btnCustomization.ImageOptions.SvgImage = global::Sales.Properties.Resources.initialstate;
             this.btnCustomization.Name = "btnCustomization";
             // 
             // barDockControlTop

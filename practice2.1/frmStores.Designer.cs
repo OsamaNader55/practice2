@@ -54,7 +54,7 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Image = global::practice2._1.Properties.Resources._32officeicons_3_89720;
+            this.btnDelete.Image = global::Sales.Properties.Resources._32officeicons_3_89720;
             this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDelete.Location = new System.Drawing.Point(232, 12);
             this.btnDelete.Name = "btnDelete";
@@ -68,7 +68,7 @@
             // btnNew
             // 
             this.btnNew.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnNew.Image = global::practice2._1.Properties.Resources._1486485588_add_create_new_math_sign_cross_plus_81186__1_;
+            this.btnNew.Image = global::Sales.Properties.Resources._1486485588_add_create_new_math_sign_cross_plus_81186__1_;
             this.btnNew.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnNew.Location = new System.Drawing.Point(406, 12);
             this.btnNew.Name = "btnNew";
@@ -81,7 +81,7 @@
             // 
             // btnSave
             // 
-            this.btnSave.Image = global::practice2._1.Properties.Resources.saveas_1173;
+            this.btnSave.Image = global::Sales.Properties.Resources.saveas_1173;
             this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSave.Location = new System.Drawing.Point(320, 12);
             this.btnSave.Name = "btnSave";

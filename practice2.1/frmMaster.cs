@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static practice2._1.Master;
-
+using Sales;
 namespace practice2._1
 {
     public partial class frmMaster : XtraForm

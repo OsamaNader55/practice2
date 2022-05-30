@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using Sales;
 namespace practice2._1
 {
     
@@ -83,7 +83,7 @@ namespace practice2._1
                 txtMobile.Text = info.Mobile;
                 txtAddress.Text = info.Address;
                 txtEmail.Text = info.Email;
-                if (info.Logo == null) pictureEdit1.Image = Properties.Resources.noimage;
+                if (info.Logo == null) pictureEdit1.Image =Sales. Properties.Resources.noimage;
                 else pictureEdit1.Image = Master.GetimageFromByteArray(info.Logo.ToArray());
             }
         }

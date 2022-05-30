@@ -10,7 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using Sales;
 namespace practice2._1
 {
     public partial class frmLogIn : frmMaster
@@ -58,17 +58,17 @@ namespace practice2._1
                         //Saving user Login
                         if (checkEdit2.Checked == true)
                         {
-                            Properties.Settings.Default.LastUserName = txtUsername.Text;
-                            Properties.Settings.Default.LastPassWord = txtPassword.Text;
-                            Properties.Settings.Default.Save();
+                         Sales.   Properties.Settings.Default.LastUserName = txtUsername.Text;
+                         Sales.   Properties.Settings.Default.LastPassWord = txtPassword.Text;
+                         Sales.   Properties.Settings.Default.Save();
                         }
                         else
                         {
-                            Properties.Settings.Default.LastUserName = null;
-                            Properties.Settings.Default.LastPassWord = null;
-                            Properties.Settings.Default.Save();
+                         Sales.   Properties.Settings.Default.LastUserName = null;
+                         Sales.   Properties.Settings.Default.LastPassWord = null;
+                            Sales.Properties.Settings.Default.Save();
                         }
-                        Properties.Settings.Default.chkboxlastvalue =(bool)checkEdit2.EditValue;
+                       Sales. Properties.Settings.Default.chkboxlastvalue =(bool)checkEdit2.EditValue;
                        
                         //add splash screen to load data    wrong using system.threading.sleep(5000);
 
@@ -109,9 +109,9 @@ namespace practice2._1
 
         private void frmLogIn_Load(object sender, EventArgs e)
         {
-            txtUsername.Text = Properties.Settings.Default.LastUserName;
-            txtPassword.Text = Properties.Settings.Default.LastPassWord;
-            checkEdit2.Checked = Properties.Settings.Default.chkboxlastvalue;
+            txtUsername.Text =Sales. Properties.Settings.Default.LastUserName;
+            txtPassword.Text = Sales.Properties.Settings.Default.LastPassWord;
+            checkEdit2.Checked = Sales.Properties.Settings.Default.chkboxlastvalue;
         }
 
         private void frmLogIn_KeyDown(object sender, KeyEventArgs e)

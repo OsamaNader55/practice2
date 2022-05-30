@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using DevExpress.XtraBars;
 using DevExpress.XtraEditors;
 using static practice2._1.Master;
-
+using Sales;
 namespace practice2._1
 {
     

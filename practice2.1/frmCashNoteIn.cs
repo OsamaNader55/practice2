@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using Sales;
 namespace practice2._1
 {
     public class frmCashNoteIn:frmCashNote

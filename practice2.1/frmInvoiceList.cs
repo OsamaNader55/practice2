@@ -11,7 +11,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using Sales;
 namespace practice2._1
 {
     public partial class frmInvoiceList : frmMaster
@@ -113,7 +113,7 @@ namespace practice2._1
             if (e.HitInfo.InRow || e.HitInfo.InRowCell)
             {
                 var buttonPrint = new DevExpress.Utils.Menu.DXMenuItem() { Caption = "طباعه" };
-                buttonPrint.ImageOptions.Image =Properties.Resources.printer_32x32;
+                buttonPrint.ImageOptions.Image = Sales.Properties.Resources.printer_32x32;
                 buttonPrint.Click += ButtonPrint_Click;
                 e.Menu.Items.Add(buttonPrint);
             }

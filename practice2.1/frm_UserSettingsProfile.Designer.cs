@@ -106,7 +106,7 @@
             // 
             this.btnSavee.Caption = "حفظ";
             this.btnSavee.Id = 0;
-            this.btnSavee.ImageOptions.Image = global::practice2._1.Properties.Resources.saveas_1173;
+            this.btnSavee.ImageOptions.Image = global::Sales.Properties.Resources.saveas_1173;
             this.btnSavee.ImageToTextAlignment = DevExpress.XtraBars.BarItemImageToTextAlignment.AfterText;
             this.btnSavee.Name = "btnSavee";
             this.btnSavee.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnSavee_ItemClick);
@@ -115,7 +115,7 @@
             // 
             this.btnNew.Caption = "جديد";
             this.btnNew.Id = 1;
-            this.btnNew.ImageOptions.Image = global::practice2._1.Properties.Resources._1486485588_add_create_new_math_sign_cross_plus_81186__1_;
+            this.btnNew.ImageOptions.Image = global::Sales.Properties.Resources._1486485588_add_create_new_math_sign_cross_plus_81186__1_;
             this.btnNew.ImageToTextAlignment = DevExpress.XtraBars.BarItemImageToTextAlignment.AfterText;
             this.btnNew.Name = "btnNew";
             this.btnNew.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnNew_ItemClick);
@@ -124,7 +124,7 @@
             // 
             this.btnDelete.Caption = "حذف";
             this.btnDelete.Id = 2;
-            this.btnDelete.ImageOptions.Image = global::practice2._1.Properties.Resources._32officeicons_3_89720;
+            this.btnDelete.ImageOptions.Image = global::Sales.Properties.Resources._32officeicons_3_89720;
             this.btnDelete.ImageToTextAlignment = DevExpress.XtraBars.BarItemImageToTextAlignment.AfterText;
             this.btnDelete.Name = "btnDelete";
             // 
@@ -172,7 +172,7 @@
             // 
             this.btnSave.Caption = "حفظ";
             this.btnSave.Id = 0;
-            this.btnSave.ImageOptions.Image = global::practice2._1.Properties.Resources.saveas_1173;
+            this.btnSave.ImageOptions.Image = global::Sales.Properties.Resources.saveas_1173;
             this.btnSave.ImageToTextAlignment = DevExpress.XtraBars.BarItemImageToTextAlignment.AfterText;
             this.btnSave.Name = "btnSave";
             // 
