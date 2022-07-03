@@ -49,13 +49,9 @@ namespace practice2._1
         }
         void Setdata()
         {
-            if (user.Password.Trim() != txtPassWord.Text.Trim())
-            {
                 var hasher = new Liphsoft.Crypto.Argon2. PasswordHasher();
-
                 string myhash = hasher.Hash(txtPassWord.Text);
                 txtPassWord.Text = myhash;
-            }
             user.Name = txtName.Text;
             user.Password = txtPassWord.Text.Trim();
             user.UserName = txtUserName.Text.Trim();
